@@ -196,7 +196,7 @@ footer {
 }
 
 @media only screen and (max-width: 800px) {
-	}.container {
+	.container {
 		width: 90% ;
 	}
 
@@ -243,19 +243,67 @@ footer {
 	h2 {
 		font-size: 20px;
 	}
+
+	.contact {
+		line-height: 0.9;
+	}
 }
 
-@media only screen and (max-width: 500px) {
+@media (max-width: 500px) {
+
 	.container {
-		width: 500px ;
+		width: 100% ;
 	}
+
 	header nav {
 		display: flex;
 		flex-direction: column;
 		width: 500px ;
+		margin-top: 0px;
 	}
+
 	header a {
 		width: 100% ;
 		border-bottom: 1px solid black;
 	}
+
+	header nav a {
+		font-size: 25px;
+		padding: 3% ;
+	}
+
+	.logo {
+		padding: 4%;
+	}
+
+	.top-content, .bottom-content {
+		flex-direction: column;
+		width: 100% ;
+	}
+
+	.text-content {
+		margin: 4%;
+	}
+
+	.main-content, .contact {
+		border-top: 2px solid black ; 
+
+	}
+
+	.main-content .bottom-content .text-content {
+		width: 100% ;
+		margin-right: 0 ;
+		margin-left: 0 ;
+	}
+
+	.main-content .top-content .text-content {
+		width: 100% ;
+		margin-right: 0 ;
+		margin-left: 0 ;
+	}
+
+	.contact {
+		margin-top: 2%;
+	}
+	
 }
