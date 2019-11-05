@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5 {
 
 /*Copy and paste your work from yesterday here and start to refactor into flexbox */
 .container {
-  width: 880px;
+  width: 60%;
   /* TB LR */
   margin: 0 auto;
 } 
@@ -77,36 +77,38 @@ header {
     justify-content: space-evenly;
     align-content: center;
 }
-nav {
+header nav {
   width: 691px;
   vertical-align: top;
   margin-top: 35px;
 }
 
-nav a {
+header nav a {
   margin-right: 65px;
   font-size: 14px;
   color: gray;
   text-decoration: none;
 }
 
-nav a:hover {
+header nav a:hover {
   text-decoration: underline;
 }
 
-nav a:first-child {
+header nav a:first-child {
   margin-left: 0;
 }
 
-nav a:last-child {
+header nav a:last-child {
   margin-right: 0;
 }
 
-.logo {
+header .logo {
   margin-top: 25px;
 }
 
 .services-header-img {
+    width:100%;
+    height: 200px;
 	margin: 2% 0 5%;	
 }
 
@@ -164,11 +166,15 @@ h1 {
 }
 
 .bottomText div ul {
-	list-style: square;
+	list-style: armenian;
 	line-height: 200%;
 	position: relative;	
 	left: 5% ;
 	text-indent: 5%;
+}
+
+.services-info-img {
+    width: 48% ;
 }
 
 footer {
@@ -177,91 +183,41 @@ footer {
   font-size: 14px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 440px) {
+	body {
 
-	.container {
-	  width: 100%;
-			/* TB LR */
+		.container {
+	  	width: 440px;
+		}
+
+		header nav {
+	  	width: 345px;
+	  	margin-top: 17px;
+		}
+
+		header nav a {
+	  	margin-right: 32px;
+	  	font-size: 12px;
+		}
+
+		header .logo {
+	  	margin-top: 12px;
+		}
+
+		.services-header-img {
+			max-width: 440px;
+		}
+
+		.border {
+			width: 100%;
+		}
+
+		.bottomText {
+			flex-direction: column;
+		}
+
+		.bottomText div {
+			width: 100%;
+		}
+
 	}
-
-	/* header */
-
-	header {
-		flex-direction: column-reverse;
-		text-align: center;
-	}
-
-	 nav {
-		width: 100%;
-		margin: 3% 1% ;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-evenly;
-
-	}
-
-	nav a {
-	  font-size: 18px;
-	}
-
-	.logo {
-	  margin-top: 12px;
-	}
-
-	.services-header-img {
-		width: 100%;
-	}
-
-	.mainText, .infoText {
-		margin: 0 2% ;
-	}
-	.border {
-		width: 100%;
-	}
-
-	.bottomText {
-		margin: 0 2% ;
-	}
-
-	.bottomText div {
-		width: 48%;
-		margin: 0 1% ;
-	}
-
-	.services-info.img {
-		width: 48%;
-	}
-
-}
-
-@media (max-width: 500px) {
-	header nav {
-		display: flex;
-		flex-direction: column;
-		width: 100% ;
-		margin-top: 0px;
-	}
-
-	header a {
-		width: 100% ;
-		border-bottom: 1px solid black;
-	}
-
-	header nav a {
-		font-size: 25px;
-		padding: 3% ;
-	}
-
-	.logo {
-		padding: 4%;
-	}
-
-	.bottomText {
-		margin: 0 ;
-		flex-direction: column;
-	}
-
-	.bottomText ul {
-		padding-left: 2%;
-	}
-}
